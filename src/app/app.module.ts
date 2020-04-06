@@ -8,6 +8,7 @@ import { ErrorpageComponent } from './Components/errorpage/errorpage.component';
 import { ContactpageComponent } from './Components/contactpage/contactpage.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 import { AccesspageComponent } from './Components/accesspage/accesspage.component';
+import { GitFormInputComponent } from './Forms/git-form-input/git-form-input.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AccesspageComponent } from './Components/accesspage/accesspage.componen
     ErrorpageComponent,
     ContactpageComponent,
     NavigationComponent,
-    AccesspageComponent
+    AccesspageComponent,
+    GitFormInputComponent
   ],
   imports: [
     BrowserModule,
