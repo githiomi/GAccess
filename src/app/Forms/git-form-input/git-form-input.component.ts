@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-git-form-input',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./git-form-input.component.css']
 })
 export class GitFormInputComponent implements OnInit {
+
+  userinfo : any = "";
+
+  @Output() submitGithubUsername = new EventEmitter <any>();
+
+  outputUsername(username : any){
+    this.submitGithubUsername.emit(username);
+  }
 
   constructor() { }
 

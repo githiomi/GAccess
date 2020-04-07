@@ -1,3 +1,6 @@
-<p>accesspage works!</p>
+<!-- This is the from where the user can put his/her username -->
+   <app-git-form-input (submitGithubUsername) = 'acceptUsername($event)' ></app-git-form-input>
 
-<app-git-form-input></app-git-form-input>
+<div class="output">
+ Your username is: <cite>{{ receivedUsername }}</cite>
+</div>

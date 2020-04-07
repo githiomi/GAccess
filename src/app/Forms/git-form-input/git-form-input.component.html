@@ -1,1 +1,19 @@
-<p>git-form-input works!</p>
+<div id="usernameform" class="bg-dark"> 
+
+      <h3 class="text-center">User Information Search:</h3>
+
+      <hr>
+   <form #userInfoForm = 'ngForm'>
+
+      <div class="form-group">
+       <label for="usernamesearch">Github Username: </label>
+       <input required type="text" id="usernamesearch" #usernamesearch = 'ngModel' [(ngModel)] = "userinfo" name="userinfo" placeholder="Enter your Github username...">
+      </div>
+
+      <div class="confirm">
+         <cite>Please confirm the username: {{ userinfo }}</cite>
+      </div>
+   </form>
+
+   <button (click) = 'outputUsername(userinfo)' class = "btn btn-success">Search Username</button>
+</div>
