@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { GitInfoStructure } from '../Models/git-info-structure';
-import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http'
+import { environment } from '../../environments/environment'
 
 
 @Injectable({
@@ -10,38 +11,48 @@ import { HttpClient } from '@angular/common/http'
 export class ExtractGitInfoService {
 
   outputStructure : GitInfoStructure;
-  prefixUrl : string = 'https://api.github.com/users/';
-  suffixUrl : string = 'githiomi';
+  name : any = '';
 
-  // githiomiUrl : string = "https://api.github.com/users/githiomi";
-
-  constructor(public completeUrl : HttpClient) {
-    this.outputStructure = new GitInfoStructure("", "", "", "", "", 0, 0);
+  constructor(public http : HttpClient) { 
+    this.outputStructure = new GitInfoStructure ("", "");
   }
 
-  getUserArray(){
+  private userLinkSource = new Subject<string>();
+  _userLink$ = this.userLinkSource.asObservable();
 
-    interface UserStructure{
-      Username : string;
-      Name : string;
+  serviceAccept (username : any) { 
+    this.userLinkSource.next(username);
+    this.name = username;
+
+    interface UserDetails{
+      login : any;
+      name : any;
     }
 
-    let Ahidi = new Promise((resolve, reject) => {
-      this.completeUrl.get<UserStructure>(`${this.prefixUrl}${this.suffixUrl}`).toPromise().then(
+    setTimeout(() => {
+      let Ahidi = new Promise ((resolve, reject) => 
+       this.http.get <UserDetails> (`${environment.infoLinkUrl}${this.name}`).toPromise().then(
         datum => {
-          this.outputStructure.githubUsername = datum.Username;
-          this.outputStructure.githubName = datum.Name;
+          this.outputStructure.githubUsername = datum.login;
+          this.outputStructure.githubName = datum.name;
 
-          resolve()
+          resolve();
         },
-        err => {
-          this.outputStructure.githubUsername = "Cannot be Obtained!";
-          this.outputStructure.githubName = "Cannot be Obtained!";
-
-          reject(err);
+        error => {
+          this.outputStructure.githubUsername = "Couldn't obtain ^-^";
+          this.outputStructure.githubName = "Couldn't obtain ^-^";
+      
+          reject (error);
         })
-    })
+     )
     return Ahidi;
+       
+    }, 3000);
+  }
+        
+   
+  ngOnInit(){
+
   }
 
 }

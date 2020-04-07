@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ExtractGitInfoService } from '../../Services/extract-git-info.service'
 
 @Component({
   selector: 'app-git-form-input',
@@ -7,15 +8,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GitFormInputComponent implements OnInit {
 
-  userinfo : any = "";
+  userinfo : string = '';
+  constructor(public extractGitInfo : ExtractGitInfoService) { }
 
-  @Output() submitGithubUsername = new EventEmitter <any>();
-
-  outputUsername(username : any){
-    this.submitGithubUsername.emit(username);
+  outputUsername (username : any){
+    this.extractGitInfo.serviceAccept(username);
   }
-
-  constructor() { }
 
   ngOnInit(): void {
   }
