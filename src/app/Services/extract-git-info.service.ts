@@ -47,7 +47,7 @@ export class ExtractGitInfoService {
      )
     return Ahidi;
        
-    }, 3000);
+    }, 10000);
   }
         
    
