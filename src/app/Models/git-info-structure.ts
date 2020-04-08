@@ -1,10 +1,14 @@
 export class GitInfoStructure {
 
-   constructor( public githubUsername : string, public githubName : string  ){
-
+   constructor( public githubPicture : any, 
+                public githubUsername : string, 
+                public githubName : string,
+                public githubBio : any,
+                public githubFollowers : number,
+                public githubFollowing : number ){
    }
    
 }
 
 
-// Other fields: public githubPicture : any, string, public githubCompany : string, public githubBio : any, public followers : number,public following : number
+// Other fields:  string, public githubCompany : string, 

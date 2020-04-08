@@ -1,14 +1,37 @@
-
-<!-- This is the from where the user can put his/her username -->
+   <!-- This is the from where the user can put his/her username -->
    <app-git-form-input> </app-git-form-input>
 
-<div class="output">
-   Github Username: {{ userDetails.githubUsername }}
-   <br>
-   Github Name: {{ userDetails.githubName }}
+<div class="container-fluid">
+   <div class="output" [hidden] = 'userDetails.githubUsername === "" '>
+
+   <div class="row">
+
+    <div class="col-md-4">
+      <div class="profilePic">
+         <img src="{{ userDetails.githubPicture }}" width = "250px" height = "250px" alt="Your profile Picture Appears Here!">
+      </div>
+    </div>
+    
+    <div class="col-md-8; bg-dark">
+     <div class="writtenOutput">
+
+      Github Username: <span class="urlinfo">{{ userDetails.githubUsername }}</span>
+      <br>
+      The Github Name: <span class="urlinfo">{{ userDetails.githubName }}</span>
+      <br>
+      Your Github Bio-s:  <span class="urlinfo">{{ userDetails.githubBio }}</span>
+      <br>
+      Github Follower(s): <span class="urlinfo">{{ userDetails.githubFollowers }}</span>
+      <br>
+      Github Followings: <span class="urlinfo">{{ userDetails.githubFollowing }}</span>
+
+     </div>
+    </div>
+   </div>
+
+   </div>     
 </div>
    
-<!-- This will add the progress bar -->
-<ng-progress></ng-progress>
+
 
 
