@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  }
+import { MyinfoserviceService } from '../../Services/myinfoservice/myinfoservice.service';
+import { Mygit } from '../../Models/mygit/mygit'
 
 @Component({
   selector: 'app-my-git-hub',
@@ -8,9 +9,18 @@ import {  }
 })
 export class MyGitHubComponent implements OnInit {
 
-  constructor() { }
+  _mygit : Mygit;
+  _myrepos : Mygit;
 
-  ngOnInit(): void {
+  constructor(public mygitservice : MyinfoserviceService) { }
+
+  ngOnInit(){
+    this.mygitservice.getMyInfo();
+    this._mygit = this.mygitservice.myStructure;
+
+    // this.mygitservice.getRepoArray();
+    // this._myrepos = this.mygitservice.myStructure;
+    // console.log(this._myrepos);
   }
 
 }

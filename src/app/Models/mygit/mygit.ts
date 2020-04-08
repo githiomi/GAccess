@@ -6,5 +6,5 @@ export class Mygit {
                public myBio : string,
                public myFollowers : number,
                public myFollowing : number,
-               public myRepos: any){}
+               public myRepos : []){}
 }

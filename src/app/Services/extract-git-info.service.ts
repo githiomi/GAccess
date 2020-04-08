@@ -46,16 +46,14 @@ export class ExtractGitInfoService {
           resolve();
         },
         error => {
-          setTimeout(() => {
+
             this.outputStructure.githubPicture = "https://www.changefactory.com.au/wp-content/uploads/2010/09/bigstock-Vector-Error-Icon-66246010.jpg";
-            this.outputStructure.githubUsername = "Could not be obtained!";
-            this.outputStructure.githubName = "Could not be obtained!";
-            this.outputStructure.githubBio = "Could not be obtained!";
+            this.outputStructure.githubUsername = "";
+            this.outputStructure.githubName = "";
+            this.outputStructure.githubBio = "";
             this.outputStructure.githubFollowers = 0;
             this.outputStructure.githubFollowing = 0;
-      
-          }, 10000);
-            
+                
           reject (error);
         })
      )

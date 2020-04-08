@@ -12,7 +12,7 @@ export class MyinfoserviceService {
   suffix : string = "githiomi";
 
   constructor(public _http : HttpClient) {
-      this.myStructure = new Mygit ("", "", "", "", 0, 0, "");
+      this.myStructure = new Mygit ("", "", "", "", 0, 0, []);
    }
 
    getMyInfo(){
@@ -37,4 +37,17 @@ export class MyinfoserviceService {
        }
      )
    }
+
+//    getRepoArray(){
+//      interface getRepoArray{
+//        name : [];
+//      }
+
+//      this._http.get < getRepoArray> (`${environment.infoLinkUrl}${this.suffix}/repos`).toPromise().then(
+//        data => {
+//          this.myStructure.myRepos = data.name;
+//          console.log(this.getRepoArray.name);
+//        }
+//      )
+//    }
 }

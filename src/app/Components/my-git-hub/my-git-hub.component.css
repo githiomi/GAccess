@@ -1,0 +1,48 @@
+#mygit{
+   padding: 13px;
+   margin: 10px;
+   border-radius: 20px;
+   border: 3px solid teal;
+   box-shadow: 3px 3px 3px black;
+}
+
+.bg-dark{
+   margin: 30px;
+   color: wheat;
+   border-radius: 20px;
+   padding: 10px;
+}
+
+h5{
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.row{
+   margin-left: 40px;
+}
+
+.info{
+   margin: 20px;
+   padding: 20px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.mygit{
+   color: white;
+   font-weight: bolder;
+   border-bottom: 2px solid teal;
+}
+
+.col-md-3{
+   padding: 10px;
+   margin: 0px 20px 0px 30px;
+}
+
+#right{
+   width: 68%;
+   padding: 15px;
+   margin: 10px;
+   border-radius: 20px;
+   border: 3px solid teal;
+   box-shadow: 3px 3px 3px black;
+}
