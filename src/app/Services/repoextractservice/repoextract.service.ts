@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class RepoextractService {
 
   name : any = '';
+  public _url : string = environment.infoLinkUrl;
 
   constructor(public _http : HttpClient) {}
 
@@ -21,7 +22,7 @@ export class RepoextractService {
     this.name = username;
     console.log(this.name);
 
-    return this._http.get (`${environment.infoLinkUrl}${this.name}/repos`); 
+    return this._http.get (`${this._url}${this.name}/repos`); 
   }
   
 }
