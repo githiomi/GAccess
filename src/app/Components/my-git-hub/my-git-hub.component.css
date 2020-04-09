@@ -46,3 +46,49 @@ h5{
    border: 3px solid teal;
    box-shadow: 3px 3px 3px black;
 }
+
+.bg-dark{
+   margin: 30px;
+   color: wheat;
+   border-radius: 20px;
+   padding: 10px;
+}
+
+.header{
+   margin: 20px;
+}
+
+h5{
+   margin: 5px;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+}
+
+.repoCount{
+   font-family: 'Courier New', Courier, monospace;
+   border-radius: 15px;
+   box-shadow: 3px 3px 3px teal;
+   padding: 8px;
+}
+
+.repos{
+   background-color: wheat;
+   border-radius: 20px;
+   padding: 10px;
+   color: black;
+   margin: 5px;
+   box-shadow: 3px 3px 3px black;
+}
+
+.title{
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+}
+
+button{
+   margin: 5px 0px 5px 20px;
+   width: 150px;
+   padding: 5px;
+   box-shadow: 2px 2px 2px black;
+   border-radius: 10px;
+}

@@ -8,17 +8,20 @@ import { Subject } from 'rxjs';
 })
 export class RepoextractService {
 
+  name : any = '';
+
   constructor(public _http : HttpClient) {}
 
   private userLinkSource = new Subject<string>();
   _userLink$ = this.userLinkSource.asObservable();
-  name : any = "daneden";
+
 
   extractRepos( username : any) { 
-    // this.userLinkSource.next(username);
-    // this.name = username;
+    this.userLinkSource.next(username);
+    this.name = username;
+    console.log(username);
 
-    return this._http.get (`${environment.infoLinkUrl}${this.name}/repos`);      
+    return this._http.get (`${environment.infoLinkUrl}${username}/repos`); 
   }
   
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyinfoserviceService } from '../../Services/myinfoservice/myinfoservice.service';
 import { Mygit } from '../../Models/mygit/mygit'
+import { MyreposerviceService } from 'src/app/Services/myreposervice/myreposervice.service';
 
 @Component({
   selector: 'app-my-git-hub',
@@ -9,18 +10,28 @@ import { Mygit } from '../../Models/mygit/mygit'
 })
 export class MyGitHubComponent implements OnInit {
 
+  repos;
   _mygit : Mygit;
   _myrepos : Mygit;
+  repoLength : number;
 
-  constructor(public mygitservice : MyinfoserviceService) { }
+  constructor(public mygitservice : MyinfoserviceService, public _myrepositories : MyreposerviceService) { }
+
+  displayDetails(index){
+    this.repos[index].showRepoDetails = !this.repos[index].showRepoDetails;
+  }
 
   ngOnInit(){
     this.mygitservice.getMyInfo();
     this._mygit = this.mygitservice.myStructure;
 
-    // this.mygitservice.getRepoArray();
-    // this._myrepos = this.mygitservice.myStructure;
-    // console.log(this._myrepos);
+    this._myrepositories.getMyRepos().subscribe(
+      datum => {
+        this.repos = datum;
+        this.repoLength = this.repos.length;
+        console.log(datum)
+      }
+    )
   }
 
 }

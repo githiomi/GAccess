@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ReposModels } from 'src/app/Models/reposModels/repos-models';
 
 @Component({
   selector: 'app-repodetails',

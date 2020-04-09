@@ -11,7 +11,7 @@
         <span class="title">{{ repo.name }} <br></span>
         <hr>
 
-         <button class="btn-warning" (click) = "displayDetails(i)" >Repository Details</button>
+         <button class="btn-warning" (click) = "displayDetails(i)">Repository Details</button>
 
       <app-repodetails *ngIf = "repo.showRepoDetails" [repoDetails] = 'repo' ></app-repodetails>
       </div>
