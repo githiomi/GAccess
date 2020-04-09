@@ -11,6 +11,7 @@ import { environment } from '../../environments/environment'
 export class ExtractGitInfoService {
 
   outputStructure : GitInfoStructure;
+  _prefixUrl : string = 'https://api.github.com/users/';
   name : any = '';
 
   constructor(public http : HttpClient) { 
@@ -34,7 +35,7 @@ export class ExtractGitInfoService {
     }
 
       let Ahidi = new Promise ((resolve, reject) => 
-       this.http.get <UserDetails> (`${environment.infoLinkUrl}${this.name}`).toPromise().then(
+       this.http.get <UserDetails> (`${this._prefixUrl}${this.name}`).toPromise().then(
         datum => {
           this.outputStructure.githubPicture = datum.avatar_url;
           this.outputStructure.githubUsername = datum.login;
