@@ -1,27 +1,53 @@
 # GAccess
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+Created by; * Daniel Githiomi *
 
-## Development server
+## Screenshots
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  ![SCREENSHOT](src/assets/GAccessScreenShot.png)
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Github Access (GAccess) is a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 
-## Build
+## Setup/Installation Requirements
+* i5 Core
+* 6GB RAM
+* 1TB Internal storage 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Compatibility
 
-## Running unit tests
+  Compatible with all browsers.
+  further updates on the way. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+It is made completly using sublime Text 3 where all the following files were created and modified until the output is as you see it.
+* HTML 5
+* CSS, Bootstrap
+* Javascript
+* JQuery
 
-## Running end-to-end tests
+## Known Bugs
+No bugs to report at the moment! the system works efficiently at 100% guaranteed. Feel free to search the output on googl to ensure that it coincides exactly.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Link to live page
+[Click-Here](https://githiomi.github.io/GAccess)
 
-## Further help
+## Setup Instructions
+* git clone [This](https://githiomi.github.io/GAccess) into your terminal.  
+* Open the folder in your favourite editor, for example vscode ,is code . and for atom, atom . 
+* Open the index.html in your browser.
+* Enjoy quotevine app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Support and contact details
+Contact me through any of the following:
+* Slack: danielgithiomi
+* Email: danielgithiomi@gmail.com
+
+
+### License
+Click the following to acces the license page: [Click-Here] (https://github.com/githiomi/license/blob/master/LICENSE)
+
+Copyright (c) {2020} Dhosio Co.
