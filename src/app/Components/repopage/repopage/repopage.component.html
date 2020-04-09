@@ -1,1 +1,20 @@
-<p>repopage works!</p>
+<div class="container-fluid" id="repositories">
+
+   <div class="header">
+      <h5 class="text-center; bg-dark">LIST OF YOUR REPOSITORIES</h5>
+
+      <cite class="text-center; repoCount">A total of {{ repoLength }} repositories have been detected!</cite>
+   </div>
+
+   <div class="allrepos">
+      <div class="repos" *ngFor = 'let repo of repos; let i = index'> <hr>
+        <span class="title">{{ repo.name }} <br></span>
+        <hr>
+
+         <button class="btn-warning" (click) = "displayDetails(i)" >Repository Details</button>
+
+      <app-repodetails *ngIf = "repo.showRepoDetails" [repoDetails] = 'repo' ></app-repodetails>
+      </div>
+   </div>
+
+</div>

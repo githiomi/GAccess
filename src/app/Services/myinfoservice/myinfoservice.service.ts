@@ -38,16 +38,4 @@ export class MyinfoserviceService {
      )
    }
 
-//    getRepoArray(){
-//      interface getRepoArray{
-//        name : [];
-//      }
-
-//      this._http.get < getRepoArray> (`${environment.infoLinkUrl}${this.suffix}/repos`).toPromise().then(
-//        data => {
-//          this.myStructure.myRepos = data.name;
-//          console.log(this.getRepoArray.name);
-//        }
-//      )
-//    }
 }

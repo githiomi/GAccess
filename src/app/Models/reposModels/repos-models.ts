@@ -2,11 +2,12 @@ export class ReposModels {
 
    showRepoDetails : boolean;
 
-   constructor(public repoName : any,
-               public repoLink : any,
-               public repoDescription : any,
-               public repoDateCreated : Date){
+   name : any;
+   html_url : any;
+   description : any;
+   created_at : Date;
 
-                  this.showRepoDetails = false;
-               }
+   constructor(){
+      this.showRepoDetails = true;
+   }
 }

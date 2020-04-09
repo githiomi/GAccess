@@ -16,6 +16,7 @@ import { AccesspageComponent } from './Components/accesspage/accesspage.componen
 import { GitFormInputComponent } from './Forms/git-form-input/git-form-input.component';
 import { MyGitHubComponent } from './Components/my-git-hub/my-git-hub.component';
 import { RepopageComponent } from './Components/repopage/repopage/repopage.component';
+import { RepodetailsComponent } from './Components/repodetails/repodetails/repodetails.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RepopageComponent } from './Components/repopage/repopage/repopage.compo
     AccesspageComponent,
     GitFormInputComponent,
     MyGitHubComponent,
-    RepopageComponent
+    RepopageComponent,
+    RepodetailsComponent
   ],
   imports: [
     BrowserModule,

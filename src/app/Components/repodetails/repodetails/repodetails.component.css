@@ -1,0 +1,10 @@
+a{
+   cursor: pointer;
+   color: teal;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+}
+
+.repoDetails{
+   margin: 20px;
+}
