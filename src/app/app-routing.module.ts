@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './Components/about/about.component';
 import { ContactpageComponent } from './Components/contactpage/contactpage.component';
 import { ErrorpageComponent } from './Components/errorpage/errorpage.component';
 import { AccesspageComponent } from './Components/accesspage/accesspage.component';
@@ -9,7 +8,7 @@ import { RepopageComponent } from './Components/repopage/repopage/repopage.compo
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/accesspage', pathMatch: 'full' },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'accesspage', component: AccesspageComponent },
   { path: 'repos', component: RepopageComponent },
   { path: 'about', component: MyGitHubComponent },
