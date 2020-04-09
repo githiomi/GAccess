@@ -5,7 +5,7 @@
 export const environment = {
   // danielGithubLink : "https://api.github.com/users/daneden?access_token=76be0661ccc938cb4b9fcb67a82bf05cce9c7a03",
   infoLinkUrl : 'https://api.github.com/users/',
-  production: false
+  production: false,
 };
 
 /*
