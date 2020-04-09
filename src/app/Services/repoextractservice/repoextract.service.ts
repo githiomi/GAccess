@@ -16,12 +16,12 @@ export class RepoextractService {
   _userLink$ = this.userLinkSource.asObservable();
 
 
-  extractRepos( username : any) { 
+  extractRepos( username : any ) { 
     this.userLinkSource.next(username);
     this.name = username;
-    console.log(username);
+    console.log(this.name);
 
-    return this._http.get (`${environment.infoLinkUrl}${username}/repos`); 
+    return this._http.get (`${environment.infoLinkUrl}${this.name}/repos`); 
   }
   
 }

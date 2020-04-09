@@ -1,7 +1,10 @@
+<div class="container-fluid">
+ 
    <!-- This is the from where the user can put his/her username -->
    <app-git-form-input> </app-git-form-input>
 
-<div class="container-fluid">
+   <ng-progress></ng-progress>
+
    <div class="output" [hidden] = ' userDetails.githubUsername === "" '>
 
    <div class="row">
@@ -21,11 +24,12 @@
       <br>
       Your Github Bio-s:  <span class="urlinfo">{{ userDetails.githubBio }}</span>
       <br>
-      Github Follower(s): <span class="urlinfo">{{ userDetails.githubFollowers }}</span>
+      Github Follower-s: <span class="urlinfo">{{ userDetails.githubFollowers }}</span>
       <br>
       Github Followings: <span class="urlinfo">{{ userDetails.githubFollowing }}</span>
 
      </div>
+
     </div>
    </div>
 

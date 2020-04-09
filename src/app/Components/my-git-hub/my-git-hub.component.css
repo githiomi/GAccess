@@ -39,7 +39,7 @@ h5{
 }
 
 #right{
-   width: 68%;
+   width: 60%;
    padding: 15px;
    margin: 10px;
    border-radius: 20px;
@@ -76,13 +76,14 @@ h5{
    border-radius: 20px;
    padding: 10px;
    color: black;
-   margin: 5px;
+   margin: 10px;
    box-shadow: 3px 3px 3px black;
 }
 
 .title{
    font-family: 'Courier New', Courier, monospace;
    font-weight: bolder;
+   text-align: center;
 }
 
 button{

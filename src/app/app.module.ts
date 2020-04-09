@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-// import { NgProgressModule } from '@ngx-progressbar/core';
-// import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './Components/about/about.component';
@@ -36,8 +36,8 @@ import { RepodetailsComponent } from './Components/repodetails/repodetails/repod
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // NgProgressModule.forRoot(),
-    // NgProgressHttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

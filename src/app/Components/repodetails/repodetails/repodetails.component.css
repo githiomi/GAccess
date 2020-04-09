@@ -8,3 +8,9 @@ a{
 .repoDetails{
    margin: 20px;
 }
+
+.addition{
+   font-weight: bolder;
+   font: outline;
+   font-style: italic;
+}

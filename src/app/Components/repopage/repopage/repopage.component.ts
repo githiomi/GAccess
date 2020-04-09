@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RepoextractService } from '../../../Services/repoextractservice/repoextract.service'
-import { ReposModels } from 'src/app/Models/reposModels/repos-models';
+import { RepoextractService } from '../../../Services/repoextractservice/repoextract.service';
 
 @Component({
   selector: 'app-repopage',
@@ -19,7 +18,8 @@ export class RepopageComponent implements OnInit {
     this.repos[index].showRepoDetails = !this.repos[index].showRepoDetails;
   }
 
-  ngOnInit() {
+  showRepos(){
+    this.username = this.repoextraction.name;
       this.repoextraction.extractRepos(this.username).subscribe(
         datum => {
           this.repos = datum
@@ -27,5 +27,8 @@ export class RepopageComponent implements OnInit {
         }
       )
     }
+
+  ngOnInit() {
+  }
 
 }
