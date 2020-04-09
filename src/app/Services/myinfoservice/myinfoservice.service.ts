@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http'
 export class MyinfoserviceService {
 
   myStructure : Mygit;
+  prefix : string = 'https://api.github.com/users/';
   suffix : string = "githiomi";
 
   constructor(public _http : HttpClient) {
@@ -26,7 +27,7 @@ export class MyinfoserviceService {
       following : number;
     }
 
-     this._http.get <MyGit> (`${environment.infoLinkUrl}${this.suffix}`). toPromise().then(
+     this._http.get <MyGit> (`${this.prefix}${this.suffix}`). toPromise().then(
        myData => {
          this.myStructure.myPic = myData.avatar_url;
          this.myStructure.myUsername = myData.login;

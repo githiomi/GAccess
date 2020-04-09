@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
 export class RepoextractService {
 
   name : any = '';
-  public _url : string = environment.infoLinkUrl;
+  public _url : string = 'https://api.github.com/users/';
 
   constructor(public _http : HttpClient) {}
 

@@ -8,12 +8,13 @@ import { environment } from '../../../environments/environment'
 export class MyreposerviceService {
 
   repos;
+  _url : string = 'https://api.github.com/users/';
   myName : string = 'githiomi';
 
   constructor(public _http : HttpClient) { }
 
   getMyRepos () {
-    return this._http.get (`${environment.infoLinkUrl}${this.myName}/repos`);
+    return this._http.get (`${this._url}${this.myName}/repos`);
   }
 
 }
